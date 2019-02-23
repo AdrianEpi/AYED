@@ -86,7 +86,7 @@ int main (void)
 
 	do 
 	{
-		cout << "Elija la operación que quiera realizar: " << endl;
+		cout << endl << endl << endl << "Elija la operación que quiera realizar: " << endl;
 		cout << endl << "\t1. Mostrar valores de a, b, c." << endl << "\t2. Mostrar opuesto de a" << endl << "\t3. Mostrar recíproco de b" << endl << " ////////// F A S E   III /////////" << endl << "\t4. Buscar un racional en un vector" << endl << " ////////// F A S E   IV /////////" << endl << "\t5. Resolver a + b"  << endl << "\t6. Resolver b -a" << endl << "\t7. Resolver a * b" << endl << "\t8. Resolver a / b" << endl << "\t0. Finalizar el programa" << endl << endl;
 
 		cin >> sentinel;
