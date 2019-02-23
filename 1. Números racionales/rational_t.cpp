@@ -104,7 +104,7 @@ bool rational_t::greater(const rational_t& r, const double precision) const
 bool rational_t::less(const rational_t& r, const double precision) const
 {
 	if ((value() - r.value()) < -precision) 		//Si a-b < -precision entonces devolvemos true
-
+		return true;
 	else
 		return false;
 }
