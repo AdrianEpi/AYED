@@ -1,0 +1,29 @@
+Evaluación de expresiones RPN
+Palabras clave
+Tipo abstracto de dato. Listas, pilas, Notación polaca inversa. Abstracción.
+
+Objetivo
+El objetivo de esta práctica es poner en práctica las competencias adquiridas durante el desarrollo de los temas relacionados con Tipos abstractos de datos. En concreto se hará hincapié en los conceptos de pilas, listas, vectores.
+
+Se persigue implementar una calculadora para evaluar expresiones RPN.
+
+Material
+El estudiante deberá utilizar los ficheros fuente proporcionado en este enunciado (RPN.zip). Se recomienda examinar las siguientes páginas web:
+
+Pilas
+Colas
+Notación polaca inversa
+Desarrollo
+Fase I
+El estudiante debe leer y comprender el material proporcionado, estudiando las clases tipo plantilla, comprobando cómo puede llevarse a cabo una concreción de una plantilla, y finalmente estudiando en profundidad la sintaxis de cada uno de los los ficheros. Es muy importante que se comprenda las dos clases pila proporcionadas: pila basada en vector, y pila basada en lista doblemente enlazada. Debe estudiarse el mecanismo de la notación polaca inversa, así como la implementación de una calculadora utilizando este tipo de notación mediante una pila.
+
+Fase II
+El estudiante debe completar la implementación de la calculadora RPN para los operandos de aridad dos +, -, * y /.
+
+Fase III
+El estudiante debe completar la implementación de la calculadora RPN para el operando de aridad dos ^, y los operandos de aridad uno raíz cuadrada (r), logaritmo en base 2 (l), y elevación al cuadrado (c).
+
+Evaluación
+Si el alumno o alumna efectúa la modificación propuesta por el profesor, y ha concluido las fase I y II : 7.0
+
+Si además de lo anterior, se ha efectuado la fase III: 10.0
