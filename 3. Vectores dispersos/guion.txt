@@ -1,0 +1,56 @@
+Vectores dispersos
+Palabras clave
+Vector disperso, lista simplemente enlazada, método constante, plantillas, sobrecarga de funciones, sobrecarga de operadores.
+
+Objetivo
+La práctica consiste en el desarrollo de una clase que cree un vector disperso a partir de un vector en formato denso. La clase vector disperso almacenará los sus elementos dentro de una lista de pares, en los que la primera parte es el índice del elemento no nulo, y la segunda es su valor. Se propondrá también el desarrollo de dos métodos para el cálculo del producto escalar. Un que contemple el producto de un vector disperso por uno denso, y otro que efectúe el producto entre dos vectores dispersos.
+
+Recursos
+Se proporciona el siguiente material:
+
+El fichero vector_t.hpp: una clase vector denso.
+
+El fichero sll_node_t.hpp: una clase de nodo de lista enlazada.
+
+El fichero sll_t.hpp: una clase de lista enlazada.
+
+El fichero pair_t.hpp: definición del tipo par.
+
+El fichero list_pair_t.hpp: adaptaciones de las clases al tipo pair_t.
+
+El fichero sparse_vector_t.hpp: definición de la clase vector disperso.
+
+El fichero main.cpp: programa principal de prueba.
+
+FASE I. COMPRENSIÓN DEL MATERIAL PROPORCIONADO
+Descargar los ficheros fuente.
+
+Compilarlos y ejecutarlos:
+
+$ g++ -g main.cpp -o sparse_vector
+
+$ ./sparse_vector
+
+Examinar los ficheros de cabecera identificando los constructores, el destructor, los métodos para acceder a los atributos, los métodos para lectura desde teclado y escritura a pantalla, e identificar los elementos privados y públicos, tanto atributos como métodos. Identificar la sintaxis de las plantillas. Establecer dónde se efectúa la sobrecarga de operadores, determinar qué operadores han sido sobrecargados.
+
+Comprender la definición de la lista enlazada, así como sus procedimientos de mantenimiento.
+
+Comprender la definición de la clase vector dispersos.
+
+FASE II. DESARROLLO DE UN CONSTRUCTOR PARA LA CLASE sparse_vector_t
+Desarrollar el constructor de la clase sparse_vector_t tal y como se ha especificado durante la clase de teoría para una clase vector disperso sobre una lista simplemente enlazada.
+
+FASE III. DESARROLLO DE UN MÉTODO PARA CÁLCULO DEL PRODUCTO ESCALAR I
+Desarrollar un método que efectúe el producto escalar entre el vector disperso invocante y un vector denso que se pasa como parámetro.
+
+FASE IV. DESARROLLO DE UN MÉTODO PARA EL CÁLCULO DEL PRODUCTO ESCALAR II
+Desarrollar un método que efectúe el producto escalar entre el vector disperso invocante y un vector disperso que se pasa como parámetro.
+
+Evaluación
+El criterio de evaluación será el siguiente:
+
+Concluir Fase I y II, y haber resuelto satisfactoriamente la modificación propuesta: 5.0
+
+Concluir Fase I, II, y III, y haber resuelto satisfactoriamente la modificación propuesta: 7.0
+
+Concluir Fase I, II, III, y IV, y haber resuelto satisfactoriamente la modificación propuesta: 10.0
