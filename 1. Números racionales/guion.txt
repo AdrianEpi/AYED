@@ -1,0 +1,60 @@
+Clase número racional
+Objetivo
+La práctica consiste en desarrollar algoritmos para diversas operaciones con números racionales (fracciones), y algunas de ellas usando comparación de números reales.
+
+Guión
+Se dispone del siguiente material:
+
+Un fichero rational_t.hpp con la definición de la clase número racional.
+Un fichero rational_t.cpp con la implementación de dicha clase número racional.
+Un fichero main_rational_t.cpp con ejemplos de uso de la clase.
+Desarrollo
+FASE I. COMPRENSIÓN DEL MATERIAL PROPORCIONADO
+Descargar los ficheros fuente.
+Compilarlos y ejecutarlos: 
+$ g++ -g rational_t.cpp main_rational_t.cpp -o main_rational_t
+$ ./main_rational_t
+Examinar el fichero de cabecera identificando los constructores, el destructor, los métodos para acceder a los atributos, los métodos para lectura desde teclado y escritura a pantalla, e identificar los elementos privados y públicos, tanto atributos como métodos.
+Examinar el fichero de implementación y comprobar las implementaciones de todos los métodos definidos en la clase.
+FASE II. DESARROLLO DE FUNCIONES DE COMPARACIÓN
+Dados dos números reales a,b∈R , y una tolerancia o precisión ϵ,
+
+para comprobar que a y b son iguales se tiene que verificar que |a−b|<ϵ  , es decir, que el valor absoluto de la diferencia es menor que cierta precisión;
+para comprobar que a es mayor que b se tiene que verificar que a−b>ϵ;
+para comprobar que a es menor que b se tiene que verificar que a−b<−ϵ⟹b−a>ϵ;
+para comprobar que a es igual a cero se tiene que verificar que  |a|<ϵ.
+Se deben desarrollar tres funciones booleanas:
+
+bool equal(const rational_t& r, const double precision = EPSILON) const;
+bool greater(const rational_t& r, const double precision = EPSILON) const;
+bool less(const rational_t& r, const double precision = EPSILON) const;
+como métodos de la clase rational_t, que efectúen la comparación de los valores reales de los números racionales tal y como se ha descrito.
+Nota: Se deberá hacer uso de la función fabs(double a), para lo cual se deberá cargar la cabecera #include <cmath>.
+
+FASE III. DESARROLLO DE UN PROCEDIMIENTO PARA COMPROBAR LOS MÉTODOS ANTERIORES 
+Se debe desarrollar un procedimiento dentro del fichero main_rational_t.cpp denominado:
+
+bool search(const rational_t* v, const int n, const rational_t& x)
+que dado un vector dinámico de tamaño n de números racionales, busca el número racional x y devuelve true si lo encuentra, o false en caso contrario.
+
+Dentro del procedimiento main() del fichero main_rational_t se ha puesto un ejemplo de búsqueda.
+
+FASE IV. DESARROLLO DE LAS OPERACIONES ARITMÉTICAS SOBRE NÚMEROS RACIONALES
+Se deben desarrollar los métodos:
+
+rational_t add(const rational_t&);
+rational_t substract(const rational_t&);
+rational_t multiply(const rational_t&);
+rational_t divide(const rational_t&);
+que implementan las funciones de sumar (add), restar (substract), multiplicar (multiply) y dividir (divide) números racionales, respectivamente.
+
+Para dichas operaciones, se puede consultar el siguiente enlace donde se describen de forma simplificada.
+
+Asimismo, dentro del código del procedimiento main() del fichero main_rational_t.cpp se han puesto algunos posibles ejemplos de operaciones.
+
+Evaluación
+El criterio de evaluación será el siguiente:
+
+Concluir Fase I y II, y haber resuelto satisfactoriamente la modificación propuesta: 5.0
+Concluir Fase I, II, y III, y haber resuelto satisfactoriamente la modificación propuesta: 7.0
+Concluir Fase I, II, III, y IV, y haber resuelto satisfactoriamente la modificación propuesta: 10.0
