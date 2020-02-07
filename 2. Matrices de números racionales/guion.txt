@@ -1,0 +1,89 @@
+Matrices de números racionales
+Objetivo
+La práctica consiste en desarrollar algoritmos para diversas operaciones con números racionales y matrices de números racionales. Se trabajará con constructores de copia, plantillas, sobrecarga de operadores, y agregación de clases.
+
+Guión
+Se dispone del siguiente material:
+
+Un fichero vector_t.hpp con la definición de la clase plantilla vector.
+
+Un fichero matrix_t.hpp con la definición de la clase plantilla matriz.
+
+Un fichero rational_t.hpp con la definición de la clase número racional.
+
+Un fichero rational_matrix_t.hpp con la definición de la clase matriz de números racionales.
+
+Un fichero main.cpp con ejemplos de uso de las clases.
+
+Desarrollo
+FASE I. COMPRENSIÓN DEL MATERIAL PROPORCIONADO
+Descargar los ficheros fuente.
+
+Compilarlos y ejecutarlos:
+
+$ g++ -g main.cpp -o matrix_rational
+$ ./matrix_rational_t
+Examinar los ficheros de cabecera identificando los constructores, el destructor, los métodos para acceder a los atributos, los métodos para lectura desde teclado y escritura a pantalla, e identificar los elementos privados y públicos, tanto atributos como métodos. Identificar la sintaxis de las plantillas. Establecer dónde se efectúa la sobrecarga de operadores, determinar qué operadores han sido sobrecargados.
+
+Examinar el fichero main.cpp y comprender la sobrecarga de operadores en las clases vector_t, matrix_t y rational_t.
+
+Encontrar dentro del fichero matrix_t.hpp la operación de multiplicación de matrices.
+
+Durante esta fase debemos entender qué hace y cómo funciona la sobrecarga del operador () en la clase matrix_t. Con ese fin debemos examinar la clase matrix_t en el programa principal. También debemos entender qué hace y cómo funciona la sobrecarga de los operadores <<, + y * en la clase rational_t.
+
+Debe examinarse el constructor de copia de la clase vector_t. ¿Cuál es la finalidad de este constructor de copia? ¿Cuál es la finalidad de la sobrecarga del operador de asignación en la clase vector_t? ¿Para qué se sobrecarga el operador [] en la clase vector_t?
+
+FASE II. DESARROLLO DE FUNCION DE MULTIPLICACIÓN
+Se debe desarrollar la función de multiplicación de matrices dentro de la clase plantilla matrix_t (véase la cabecera de la función en el fichero matrix_t.hpp). Esta función recibe como parámetros dos matrices y almacena el resultado de la multiplicación en la matriz invocante del método. Para ello se debe comprobar mediante assert que la dimensión de las matrices a multiplicar son correctas. A continuación se debe redimensionar la matriz invocante con la dimensión apropiada, a partir de las dos matrices a multiplicar. Seguidamente se efectuará el algoritmo de multiplicación matrices. NO se debe utilizar el operador +=, sino el =, + y *.
+
+Una vez desarrollado este método, se debe examinar la sobrecarga del operador * en el fichero rational_matrix_t.hpp.
+
+FASE III. DESARROLLO DE UN PROCEDIMIENTO DE SOBRECARGA DE OPERADOR
+Se debe desarrollar en el fichero rational_matrix_t.hpp la sobrecarga del operador * para la clase rational_matrix_t.
+
+FASE IV. SIMPLIFICACIÓN DE LA IMPRESIÓN DE LOS RACIONALES
+Se debe modificar el procedimiento write de la clase rational_t de manera que muestre el número racional de manera simplificada, siguiendo este esquema:
+
+Si el denominador es mayor que el numerador, se debe mostrar la fracción dividida por el Máximo Común Divisor (MCD) del denominador y numerador.
+
+Si el numerador es mayor que el denominador, el número racional num_, den_ debe expresarse como (num_ / den_)  + (num_ % den_) / den_. Nótese que también hay que simplificar el numerador y denominador de esta última fracción.
+
+Véase por ejemplo, la siguiente salida correspondiente a los datos que aparecen en el programa principal.
+
+1+ 3 / 5          2
+
+   1 / 2          2
+
+1+ 1 / 3   1+ 1 / 2
+
+ 
+
+*
+
+ 
+
+2+ 2 / 3   2+ 1 / 2     1 / 3 2+ 1 / 3  
+
+       2   2+ 1 / 2  1+ 1 / 3 1+ 1 / 2  
+
+ 
+
+=
+
+ 
+
+8+ 4 /15          9 3+ 1 / 5   6+11 /15  
+
+5+ 1 / 3   6+ 1 / 4 2+ 5 / 6   4+ 1 / 6
+
+6+ 5 / 9   7+ 1 /12 2+ 4 / 9   5+13 /36
+
+ 
+
+Evaluación
+El criterio de evaluación será el siguiente:
+
+Concluir Fase I y II, y haber resuelto satisfactoriamente la modificación propuesta: 5.0
+
+Concluir Fase I, II, y III, y haber resuelto satisfactoriamente la modificación propuesta: 7.0
+
